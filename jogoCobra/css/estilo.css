@@ -1,0 +1,71 @@
+/* Reset Básico */
+*, *::before, *::after {
+  box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho do elemento */
+  margin: 0;
+  padding: 0;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, figure, figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #341d08;
+}
+
+/* Remove os marcadores de lista */
+ol, ul {
+  list-style: none;
+}
+
+/* Garante que as imagens não quebrem o layout */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+.btnJogar{
+    background-color: white;
+    border-radius: 10px;
+    color: green;
+    width:25%;
+    height: 35px;
+    border: none;
+    margin: 20px 0px;
+    font-size:20px;
+    font-family:fantasy;
+    filter:none;
+}
+
+.divCobra {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    top: 20%;
+    background-color: rgba(0, 0, 0, 0.0); 
+    width: 100%;
+    filter:none;
+}
+.imgCobra{
+    width: 300px;
+    filter:none;
+}
+.telaInvisivel{
+    display: none;
+}
+
+.blur-fundo{
+    filter: blur(5px);
+    pointer-events: none; 
+}
+
+#canvas {
+    width: 100%;
+    /* Opcionalmente, defina a altura, por exemplo, para manter uma proporção ou ser responsiva */
+    height: 100vh;  
+}
